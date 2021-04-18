@@ -22,10 +22,11 @@
                 @Html.ActionLink("VipeTech", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">                   
+                <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Usuarios", "Details", "Usuario")</li>
                     <li>@Html.ActionLink("Departamentos", "Details", "Departamentos")</li>
+                    <li>@Html.ActionLink("Documentos", "Details", "Documento")</li>
 
                 </ul>
                 @Html.Partial("_LoginPartial")

@@ -75,6 +75,7 @@ namespace FINALP2.Controllers
         // POST: Departamentos/Delete/5
         [HttpPost]
         public ActionResult Delete(Departamentos departamentos){
+
             departamentoNegocio.Borrar(departamentos);
             
                 // TODO: Add delete logic here
