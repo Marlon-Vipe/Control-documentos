@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Departamentos</h2>
 
 @section styles{
     <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
 }
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevo departamento", "Create")
 </p>
 <table class="table" id="DepTable">
 
@@ -41,9 +41,9 @@
                     @Html.DisplayFor(modelItem => item.Siglas)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+                    
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
                 </td>
             </tr>
         }
