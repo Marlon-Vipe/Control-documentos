@@ -47,14 +47,14 @@ namespace FINALP2.Controllers
         // GET: Usuario/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(usuarioNegocio.usuariosEdit(id));
+            return View(usuarioNegocio.usersEdit(id));
         }
 
         // POST: Usuario/Edit/5
         [HttpPost]
         public ActionResult Edit(Usuarios usuario)
         {
-            usuarioNegocio.Editar(usuario);
+            usuarioNegocio.Edit(usuario);
             
                 // TODO: Add update logic here
 
@@ -65,14 +65,14 @@ namespace FINALP2.Controllers
         // GET: Usuario/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(usuarioNegocio.usuariosEdit(id));
+            return View(usuarioNegocio.usersEdit(id));
         }
 
         // POST: Usuario/Delete/5
         [HttpPost]
         public ActionResult Delete(Usuarios usuario)
         {
-            usuarioNegocio.Borrar(usuario);
+            usuarioNegocio.Delete(usuario);
 
                 // TODO: Add delete logic here
 

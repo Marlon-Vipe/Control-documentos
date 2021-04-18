@@ -133,3 +133,6 @@ C:\Users\Marlon\source\repos\FINALP2\bin\CapaEntidad.dll.config
 C:\Users\Marlon\source\repos\FINALP2\bin\CapaNegocio.pdb
 C:\Users\Marlon\source\repos\FINALP2\bin\CapaDatos.pdb
 C:\Users\Marlon\source\repos\FINALP2\bin\CapaDatos.dll.config
+C:\Users\Marlon\source\repos\FINALP2\bin\CapaServicios.dll
+C:\Users\Marlon\source\repos\FINALP2\bin\CapaServicios.pdb
+C:\Users\Marlon\source\repos\FINALP2\bin\CapaServicios.dll.config
