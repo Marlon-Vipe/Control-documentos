@@ -8,6 +8,8 @@ using CapaNegocio;
 
 namespace FINALP2.Controllers
 {
+
+    [Authorize]
     public class UsuarioController : Controller
     {
 

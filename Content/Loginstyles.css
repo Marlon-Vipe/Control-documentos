@@ -98,3 +98,56 @@ h2 {
 
 
 }
+
+.form-horizontal {
+
+    margin-right: 20%;
+    margin-left: 20%;
+    border-radius: 2%;
+    width: 550px;
+    height: 400px;
+
+}
+
+.form-group {
+
+    margin-top: 37px;
+    margin-left: 90px
+
+}
+
+
+.name-form {
+
+    margin-left: 100px;
+
+
+}
+
+.col-md-10 {
+
+    margin-left: 95px;
+    margin-top: -20px
+}
+
+. col-md-4 {
+
+
+    box-shadow: inset
+}
+
+
+.form-group-login {
+
+    margin-top: 130px;
+    margin-right: 150px;
+    margin-left: -170px;
+
+}
+
+.col-md-10-login {
+
+    margin-top: -50px;
+    margin-left: 100px;
+
+}

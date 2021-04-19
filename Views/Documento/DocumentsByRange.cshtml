@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CapaEntidad.ByDateRange_Result>
+
+@{
+    ViewBag.Title = "DocumentsByRange";
+}
+
+<h2>Por rango de fecha</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_Envio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo_Documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_DeptOrigen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_DeptDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Secuencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_Envio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo_Documento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_DeptOrigen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_DeptDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Secuencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

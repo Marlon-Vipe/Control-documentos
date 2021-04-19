@@ -8,9 +8,13 @@ using CapaNegocio;
 
 namespace FINALP2.Controllers
 {
-    public class DepartamentosController : Controller
-    {
 
+    [Authorize]
+
+    public class DepartamentosController : Controller
+
+    {
+    
         DepartamentoNegocio departamentoNegocio = new DepartamentoNegocio();
 
 

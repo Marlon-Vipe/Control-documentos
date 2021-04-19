@@ -13,10 +13,30 @@
 }
 
 <p>
-    @Html.ActionLink("Crear nuevo documento", "Create", routeValues: null, htmlAttributes: new { @class = "text-decoration-none btn-success text-light btn" })
+   
 </p>
 <table class="table" id="docutable">
     <thead>
+
+        <div class="text-right form-inline">
+            <form method="post" action="/Documento/DocumentsByRange">
+                <div class="form-group">
+                    @Html.Label("Desde", new { @class = "form-control" })
+                    <input name="Origin" type="date" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    @Html.Label("Hasta", new { @class = "form-control" })
+
+                    <input name="Destiny" type="date" class="form-control" />
+                </div>
+                <button class="btn btn-default" type="submit">Buscar</button>
+            </form>
+        </div>
+
+
+
+
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.ID_Envio)
@@ -43,6 +63,8 @@
         </tr>
     </thead>
 
+
+
     <tbody>
 
         @foreach (var item in Model)
@@ -68,9 +90,11 @@
                 </td>
                 <td>
                     @*@Html.DisplayFor(modelItem => item.Fecha)*@
-                    @item.Fecha.ToShortDateString()
+                    @item.Fecha.ToShortDateString();
                 </td>
                 <td>
+                    @Html.ActionLink(" ", "Create", routeValues: null, htmlAttributes: new { @class = " btn-lg glyphicon glyphicon-plus text-decoration-none btn-success text-light btn" })
+
                     @Html.ActionLink(" ", "Delete", new { id = item.ID_Envio }, htmlAttributes: new { @class = " btn-lg  glyphicon glyphicon-trash text-decoration-none btn-danger text-light btn" })
 
                 </td>

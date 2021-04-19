@@ -266,6 +266,7 @@
     <Content Include="Views\Documento\Create.cshtml" />
     <Content Include="Views\Documento\Details.cshtml" />
     <Content Include="Views\Account\AccountController.cshtml" />
+    <Content Include="Views\Documento\DocumentsByRange.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

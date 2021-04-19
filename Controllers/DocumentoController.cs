@@ -8,7 +8,10 @@ using CapaNegocio;
 
 namespace FINALP2.Controllers
 {
-    public class DocumentoController : Controller{
+
+    [Authorize]
+    public class DocumentoController : Controller
+    {
 
         DocumentoNegocio documentoNegocio = new DocumentoNegocio();
 
@@ -23,24 +26,26 @@ namespace FINALP2.Controllers
         }
 
         // GET: Documento/Details/5
-        public ActionResult Details(){
+        public ActionResult Details()
+        {
 
-            return View(documentoNegocio.ShowDocuments());     
+            return View(documentoNegocio.ShowDocuments());
         }
 
         // GET: Documento/Create
-        public ActionResult Create(){
+        public ActionResult Create()
+        {
 
             List<SelectListItem>
             Documentos = departamentoNegocio.ShowDepartments().ConvertAll(departamentoNegocio =>
 
         {
-        return new SelectListItem()
-        {
-            Text = departamentoNegocio.Nombre.ToString(),
-            Value = departamentoNegocio.ID.ToString(),
-            Selected = false
-        };
+            return new SelectListItem()
+            {
+                Text = departamentoNegocio.Nombre.ToString(),
+                Value = departamentoNegocio.ID.ToString(),
+                Selected = false
+            };
         });
             ViewBag.items = Documentos;
 
@@ -70,7 +75,7 @@ namespace FINALP2.Controllers
             documentoNegocio.CreateDocuments(documentos);
 
             return RedirectToAction("Index");
-        }   
+        }
 
         // GET: Documento/Edit/5
         public ActionResult Edit(int id)
@@ -84,8 +89,8 @@ namespace FINALP2.Controllers
         {
             documentoNegocio.EditDocuments(documentos);
 
-                return RedirectToAction("Index");
-            
+            return RedirectToAction("Index");
+
         }
 
         // GET: Documento/Delete/5
@@ -100,8 +105,15 @@ namespace FINALP2.Controllers
         {
             documentoNegocio.DeleteDocuments(id);
 
-                return RedirectToAction("Index");
-            
+            return RedirectToAction("Index");
+
+        }
+
+        public ActionResult DocumentsByRange(string Origin, string Destiny)
+        {
+
+            return View(documentoNegocio.DocumentsByRange(Origin, Destiny));
+
         }
     }
 }
