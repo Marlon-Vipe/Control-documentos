@@ -13,6 +13,8 @@ namespace FINALP2.Controllers
 
         UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
 
+        DepartamentoNegocio departamentoNegocio = new DepartamentoNegocio();
+
         // GET: Usuario
         public ActionResult Index()
         {
@@ -26,8 +28,22 @@ namespace FINALP2.Controllers
         }
 
         // GET: Usuario/Create
-        public ActionResult Create()
-        {
+        public ActionResult Create(){
+
+            List<SelectListItem>
+            Departamentos = departamentoNegocio.ShowDepartments().ConvertAll(departamentoNegocio =>
+
+            {
+                return new SelectListItem()
+                {
+                    Text = departamentoNegocio.Nombre.ToString(),
+                    Value = departamentoNegocio.ID.ToString(),
+                    Selected = false
+                };
+            });
+            ViewBag.items = Departamentos;
+
+
             return View();
         }
 

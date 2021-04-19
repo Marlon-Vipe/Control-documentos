@@ -1,18 +1,28 @@
 ﻿@using FINALP2.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "Iniciar sesión";
+    ViewBag.Title = "";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
+<h2>@ViewBag.Title    </h2>
+<link rel="stylesheet" href="~/Content/Loginstyles.css" />
+
+<div class="container-fluid" style="background-color: white" >   
+    <div class="container"/>
+    <section id="loginForm" class="login">
+        
+        <div class="img">
+                
+                <img class="fondo" src="~/img/candado.png" width="90px" />*
+
+        </div>
+
+        <div class="letters">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                <h4>Utilice una cuenta local para iniciar sesión.</h4>
-                <hr />
+                <img src="" />
+               
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
                     @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
@@ -37,20 +47,24 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Iniciar sesión" class="btn btn-default" />
+                    <div class="col-md-offset-2 col-md-10" style="margin-left: 220px">
+                        <input type="submit" value="Iniciar sesión" class="btn-success" />
                     </div>
                 </div>
-                <p>
+                @*<p>
                     @Html.ActionLink("Registrarse como usuario nuevo", "Register")
-                </p>
+                </p>*@
                 @* Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
-                    <p>
-                        @Html.ActionLink("¿Ha olvidado su contraseña?", "ForgotPassword")
-                    </p>*@
+            <p>
+                @Html.ActionLink("¿Ha olvidado su contraseña?", "ForgotPassword")
+            </p>*@
             }
-        </section>
-    </div>
+
+        <div class="footer"> © 2021 Developed by: Marlon Villalona. All rights reserved.</div>
+
+        </div>
+    </section>
+    
     <div class="col-md-4">
         <section id="socialLoginForm">
             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
@@ -58,6 +72,8 @@
     </div>
 </div>
 
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+

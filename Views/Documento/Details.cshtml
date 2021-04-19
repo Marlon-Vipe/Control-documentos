@@ -4,6 +4,8 @@
     ViewBag.Title = "Details";
 }
 
+<link rel="stylesheet" href="~/Content/Loginstyles.css" />
+
 <h2>Details</h2>
 
 <p>
@@ -56,12 +58,12 @@
             @Html.DisplayFor(modelItem => item.Secuencia)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Fecha)
+            @*@Html.DisplayFor(modelItem => item.Fecha)*@
+            @item.Fecha.ToShortDateString()
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Envio  }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Envio  }) |
-            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_Envio  })
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_Envio }, htmlAttributes: new { @class = "text-decoration-none btn-danger text-light btn" })
+            
         </td>
     </tr>
 }

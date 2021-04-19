@@ -1,0 +1,78 @@
+﻿
+body {
+
+    background-image: url('https://www.wallpapertip.com/wmimgs/66-666816_hd-web-background.jpg');
+    font-family: 'Comic Sans MS';
+}
+
+.container-fluid {
+
+    margin-top: 100px;
+    padding: 2%;
+    border-radius: 90px;
+    width: 55%;
+    height: 500px;
+    object-position: center;
+    background-position:center;
+    top: 100px;
+    
+
+}
+
+.letters {
+
+    position: relative;
+    margin-top: 69px
+    
+
+}
+
+.img {
+    position: relative;
+    top: -15px; /* ajustar los valores para mover la imagen */
+    left: -5px;
+    width: 15px;
+    height: 15px;
+}
+
+
+.fondo {
+
+    position: relative;
+    border-radius: 65px;
+    object-position: center;
+    margin-left: 235px;
+    margin-top: 9px;
+    
+}
+
+.container body-content {
+
+     position: relative;
+     right: 100px
+     
+
+}
+
+.footer {
+        
+    position: relative;
+    right: -70px;
+    top: 130px;
+
+
+}
+
+.col-md-offset-2 col-md-10 {
+
+        
+
+}
+
+.col-md-4 {
+
+    font-family: 'Comic Sans MS';
+
+
+
+}

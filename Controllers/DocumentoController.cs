@@ -91,14 +91,14 @@ namespace FINALP2.Controllers
         // GET: Documento/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(documentoNegocio.SelectDocuments(id));
         }
 
         // POST: Documento/Delete/5
         [HttpPost]
-        public ActionResult Delete(Documentos documentos)
+        public ActionResult Delete(int id, FormCollection del)
         {
-            documentoNegocio.DeleteDocuments(documentos);
+            documentoNegocio.DeleteDocuments(id);
 
                 return RedirectToAction("Index");
             
