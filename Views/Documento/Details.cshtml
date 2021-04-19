@@ -1,71 +1,87 @@
-﻿@model IEnumerable<CapaEntidad.Documentos>
+﻿    @model IEnumerable<CapaEntidad.Documentos>
 
 @{
     ViewBag.Title = "Details";
 }
-
+ 
 <link rel="stylesheet" href="~/Content/Loginstyles.css" />
 
-<h2>Details</h2>
+<h2>Documentos</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ID_Envio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo_Documento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Id_Usuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Id_DeptOrigen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Id_DeptDestino)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Secuencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ID_Envio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tipo_Documento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id_Usuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id_DeptOrigen)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id_DeptDestino)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Secuencia)
-        </td>
-        <td>
-            @*@Html.DisplayFor(modelItem => item.Fecha)*@
-            @item.Fecha.ToShortDateString()
-        </td>
-        <td>
-            @Html.ActionLink("Eliminar", "Delete", new { id = item.ID_Envio }, htmlAttributes: new { @class = "text-decoration-none btn-danger text-light btn" })
-            
-        </td>
-    </tr>
+@section styles{
+    <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
 }
 
+<p>
+    @Html.ActionLink("Crear nuevo documento", "Create", routeValues: null, htmlAttributes: new { @class = "text-decoration-none btn-success text-light btn" })
+</p>
+<table class="table" id="docutable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_Envio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_DeptOrigen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id_DeptDestino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Secuencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID_Envio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo_Documento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_Usuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_DeptOrigen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_DeptDestino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Secuencia)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.Fecha)*@
+                    @item.Fecha.ToShortDateString()
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "Delete", new { id = item.ID_Envio }, htmlAttributes: new { @class = " btn-lg  glyphicon glyphicon-trash text-decoration-none btn-danger text-light btn" })
+
+                </td>
+            </tr>
+
+        }
+    </tbody>
 </table>
+@section scripts{
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script>
+        $('#docutable').DataTable();
+    </script>
+}

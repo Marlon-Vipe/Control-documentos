@@ -192,9 +192,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\-vexels.png" />
     <Content Include="img\32052.jpg" />
+    <Content Include="img\c1.png" />
     <Content Include="img\candado.png" />
+    <Content Include="img\d97bbb08017ac2309307f0822e63d082.jpg" />
+    <Content Include="img\document.png" />
     <Content Include="img\fondo-degradado-azul-rojo_53876-93822.jpg" />
+    <Content Include="img\icon-5404125_960_720.png" />
+    <Content Include="img\ppp.png" />
+    <Content Include="img\shop-department.png" />
+    <Content Include="img\user.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

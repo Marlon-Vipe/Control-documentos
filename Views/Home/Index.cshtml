@@ -4,36 +4,75 @@
 
 <link rel="stylesheet" href="~/Content/Loginstyles.css"/>
 
-<div class="jumbotron">
-    <h1>Vipe Tech</h1>
+<div class="jumbotron" style="background-color: snow" >
+    <h1> VipeTech - Control de documentos </h1>
     <p class="lead">Empresa tecnológica enfocada en el desarrollo de software a nivel mundial.</p>
-    <p><a href="https://www.instagram.com/vipetechnology/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    @*<p><a href="https://www.instagram.com/vipetechnology/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
 </div>
-
+ 
 <div class="row" style="background-color: honeydew">
-    <div class="col-md-4" style="background-color: coral">
-        <h2>Usuarios</h2>
-        <p>
-            En este apartado podras visualizar los usuarios registrados en el sistema de control de
-            documentos. También podras crear, modificar y eliminar los mismos.
-        </p>
-        <br />
-        <p><a class="btn btn-default" href="/Usuario/Details">Ver usuarios &raquo;</a></p>
+    <div class="col-md-4" style="background-color: Highlight">
+
+        <a href="/Usuario/Details" style="text-decoration: none; color: black">
+
+            <button href="/Usuario/Details" style="background-color: Highlight; border: none;">
+                <center>
+                    <h2>Usuarios</h2>
+                    <img src="~/img/icon-5404125_960_720.png" alt="Candado" width="190px" />
+                </center>
+                <p>
+                    En este apartado podras visualizar los usuarios registrados en el sistema de control de
+                    documentos. También podras crear, modificar y eliminar los mismos.
+                </p>
+                <br />
+                <p><a class="btn btn-default" href="/Usuario/Details">Ver usuarios &raquo;</a></p>
+                </center>
+
+            </button>
+        </a>
     </div>
     <div class="col-md-4">
-        <h2>Departamentos</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-        </p>
-        <p><a class="btn btn-default" href="/Departamentos/Details"> Ver departamentos &raquo;</a></p>
-    </div>
-    <div class="col-md-4" style="background-color: goldenrod">
-        <h2>Documentos</h2>
-        <br />
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.asdasdasd
-        
-        </p>
 
-        <p><a class="btn btn-default" href="/Documento/Details">Ver documentos &raquo;</a></p>
-        
+        <a href="/Departamentos/Details" style="text-decoration: none; color: black">
+
+            <button href="/Departamentos/Details" style="background-color: white; border: none;">
+                <center>
+                    <h2 style="font: black">Departamentos</h2>
+                    <img src="~/img/shop-department.png" alt="Department" width="190px" />
+                </center>
+                <p>
+                    En este apartado podras visualizar los departamentos de la empresa en el sistema de control de
+                    documentos. También podras crear, modificar y eliminar los mismos.
+                </p>
+                <center>
+                    <br />
+                    <p><a class="btn btn-info" href="/Departamentos/Details"> Ver departamentos &raquo;</a></p>
+                </center>
+
+            </button>
+        </a>
+    </div>
+    <div class="col-md-4" style="background-color: mediumturquoise">
+
+        <a href="/Documento/Details" style="text-decoration: none; color: black">
+
+            <button href="/Documento/Details" style=" background-color: mediumturquoise; border: none;">
+
+                <center>
+                    <h2>Documentos</h2>
+                    <img src="~/img/ppp.png" alt="Documento" width="190px" />
+                </center>
+                <p>
+                    En este apartado podras visualizar los documentos registrados en el sistema de control de
+                    documentos. También podras crear y eliminar los mismos.
+                </p>
+                <br />
+                <br />
+                <center>
+                    <p><a class="btn btn-default" href="/Documento/Details">Ver documentos &raquo;</a></p>
+                </center>
+
+            </button>
+        </a>
     </div>
 </div>

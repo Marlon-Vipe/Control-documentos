@@ -13,7 +13,7 @@
 }
 
 <p>
-    @Html.ActionLink("Crear nuevo departamento", "Create")
+    @Html.ActionLink("Crear nuevo departamento", "Create", routeValues: null, htmlAttributes: new { @class = "text-decoration-none btn-success text-light btn" })
 </p>
 <table class="table" id="DepTable">
 
@@ -50,17 +50,15 @@
                 @Html.DisplayFor(modelItem => item.Siglas)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+                @Html.ActionLink(" ", "Edit", new { id = item.ID }, htmlAttributes: new { @class = " btn-lg  glyphicon glyphicon-pencil text-decoration-none btn-warning text-light btn" })
 
-                @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
+                @Html.ActionLink(" ", "Delete", new { id = item.ID }, htmlAttributes: new { @class = " btn-lg  glyphicon glyphicon-trash text-decoration-none btn-danger text-light btn" })
             </td>
         </tr>
         }
 
     </tbody>
 </table>
-
-
 
 @section scripts{
     <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>

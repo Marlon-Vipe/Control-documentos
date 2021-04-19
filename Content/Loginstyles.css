@@ -39,10 +39,11 @@ body {
 .fondo {
 
     position: relative;
-    border-radius: 65px;
+    border-radius: 85px;
     object-position: center;
     margin-left: 235px;
     margin-top: 9px;
+    border-radius: 30px; 
     
 }
 
@@ -73,6 +74,27 @@ body {
 
     font-family: 'Comic Sans MS';
 
+}
+
+.contact-container {
+
+        position: relative;
+        margin-top: 10px;
+
+
+}
+
+.jumbotron {
+
+     
+
+}
+
+h2 {
+   
+}
+
+.users {
 
 
 }
