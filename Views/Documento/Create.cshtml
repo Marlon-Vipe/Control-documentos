@@ -8,77 +8,82 @@
 
 <link rel="stylesheet" href="~/Content/Loginstyles.css" />
 
-<h2>Create</h2>
+<h2>Crear documento</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    <h4>Documentos</h4>
-    <hr />
+    <center>
+        <div class="form-horizontal" style="background-color: white">
+            <center>
+                <h4>Documentos</h4>
+            </center>
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.Tipo_Documento, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Tipo_Documento, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Tipo_Documento, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Tipo_Documento, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Tipo_Documento, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Tipo_Documento, "", new { @class = "text-danger" })
-        </div>
-    </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Id_Usuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Id_Usuario, (IEnumerable<SelectListItem>)elementos1, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Id_Usuario, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Id_Usuario, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Id_Usuario, (IEnumerable<SelectListItem>)elementos1, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Id_Usuario, "", new { @class = "text-danger" })
-        </div>
-    </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Id_DeptOrigen, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Id_DeptOrigen, (IEnumerable<SelectListItem>)elementos, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Id_DeptOrigen, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Id_DeptOrigen, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Id_DeptOrigen, (IEnumerable<SelectListItem>)elementos, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Id_DeptOrigen, "", new { @class = "text-danger" })
-        </div>
-    </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Id_DeptDestino, htmlAttributes: new { @class = "control-label col-md-2" })
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Id_DeptDestino, htmlAttributes: new { @class = "control-label col-md-2" })
-
-        <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Id_DeptDestino, (IEnumerable<SelectListItem>)elementos, new { @class = "form-control" })
-            @Html.ValidationMessageFor(model => model.Id_DeptDestino, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10" ty>
-            <input type="date" name="Fecha" class="form-control" />
-            @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    @*<div class="form-group">
-        @Html.LabelFor(model => model.Secuencia, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Secuencia, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Secuencia, "", new { @class = "text-danger" })
-        </div>
-    </div>*@
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Id_DeptDestino, (IEnumerable<SelectListItem>)elementos, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Id_DeptDestino, "", new { @class = "text-danger" })
+                </div>
 
 
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10" ty>
+                        <input type="date" name="Fecha" class="form-control" />
+                        @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.Secuencia, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Secuencia, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Secuencia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+            </div>
+    
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Create" class="btn btn-default" />
         </div>
     </div>
-</div>
+    </div>
+    </center>
+
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver", "Details")
 </div>
 
 
-  
+

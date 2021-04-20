@@ -8,8 +8,9 @@
 
 <h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
+
+<div style="background-color: white">
+    <h3>¿Seguro que desear eliminarlo?</h3>
     <h4>Departamentos</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -31,12 +32,13 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Volver", "Index")
+            @Html.ActionLink("Volver", "Details")
         </div>
     }
 </div>

@@ -6,14 +6,19 @@
 
 <link rel="stylesheet" href="~/Content/Loginstyles.css" />
 
-<h2>Edit</h2>
+<h2>Editar departamento</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>Departamentos</h4>
+    <div class="form-horizontal" style="background-color: white">
+        <center>
+
+            <h4>Departamentos</h4>
+
+        </center>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.ID)
@@ -36,12 +41,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Editar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Volver", "Index")
+    @Html.ActionLink("Volver", "Details")
 </div>

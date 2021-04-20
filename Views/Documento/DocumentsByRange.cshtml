@@ -4,66 +4,91 @@
     ViewBag.Title = "DocumentsByRange";
 }
 
-<h2>Por rango de fecha</h2>
+<h2>Documentos por rango de fecha</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ID_Envio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo_Documento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Id_Usuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Id_DeptOrigen)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Id_DeptDestino)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Secuencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ID_Envio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tipo_Documento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id_Usuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id_DeptOrigen)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id_DeptDestino)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Secuencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fecha)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
+@section styles{
+    <link href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" rel="stylesheet" />
 }
 
-</table>
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<center>
+    <table class="table-feca" id="usertable">
+
+        <thead>
+            <tr>
+                <br />
+                <th>
+                    @Html.DisplayNameFor(model => model.ID_Envio)
+                    <br />
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tipo_Documento)
+                    <br />
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id_Usuario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id_DeptOrigen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id_DeptDestino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Secuencia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fecha)
+                </th>
+                <th></th>
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID_Envio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tipo_Documento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_Usuario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_DeptOrigen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_DeptDestino)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Secuencia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fecha)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</center>
+
+@section scripts{
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script>
+        $('#usertable').DataTable();
+    </script>
+}

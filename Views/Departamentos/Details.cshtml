@@ -13,7 +13,7 @@
 }
 
 <p>
-   
+    @Html.ActionLink("Crear departamento", "Create", routeValues: null, htmlAttributes: new { @class = " btn-lg text-decoration-none btn-success text-light btn" })
 </p>
 <table class="table" id="DepTable">
 
@@ -50,7 +50,6 @@
                 @Html.DisplayFor(modelItem => item.Siglas)
             </td>
             <td>
-                @Html.ActionLink(" ", "Create", routeValues: null, htmlAttributes: new { @class = " btn-lg glyphicon glyphicon-plus text-decoration-none btn-success text-light btn" })
 
                 @Html.ActionLink(" ", "Edit", new { id = item.ID }, htmlAttributes: new { @class = " btn-lg  glyphicon glyphicon-pencil text-decoration-none btn-warning text-light btn" })
 

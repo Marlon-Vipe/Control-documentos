@@ -13,9 +13,9 @@
 }
 
 
-    <p>
-       
-    </p>
+<p>
+    @Html.ActionLink("Crear usuario", "Create", routeValues: null, htmlAttributes: new { @class = " btn-lg text-decoration-none btn-success text-light btn" })
+</p>
 
 <table class="table" id="usertable">
     <thead>
@@ -49,7 +49,6 @@
                     @Html.DisplayFor(modelItem => item.Cargo)
                 </td>
                 <td>
-                    @Html.ActionLink(" ", "Create", routeValues: null, htmlAttributes: new { @class = " btn-lg glyphicon glyphicon-plus text-decoration-none btn-success text-light btn" })
 
                     @Html.ActionLink(" ", "Edit", new { id = item.ID }, htmlAttributes: new { @class = "  btn-lg glyphicon glyphicon-pencil text-decoration-none btn-warning text-light btn" })
 

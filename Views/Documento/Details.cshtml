@@ -13,7 +13,7 @@
 }
 
 <p>
-   
+    @Html.ActionLink("Crear documento", "Create", routeValues: null, htmlAttributes: new { @class = " btn-lg text-decoration-none btn-success text-light btn" })
 </p>
 <table class="table" id="docutable">
     <thead>
@@ -93,8 +93,7 @@
                     @item.Fecha.ToShortDateString();
                 </td>
                 <td>
-                    @Html.ActionLink(" ", "Create", routeValues: null, htmlAttributes: new { @class = " btn-lg glyphicon glyphicon-plus text-decoration-none btn-success text-light btn" })
-
+                   
                     @Html.ActionLink(" ", "Delete", new { id = item.ID_Envio }, htmlAttributes: new { @class = " btn-lg  glyphicon glyphicon-trash text-decoration-none btn-danger text-light btn" })
 
                 </td>
