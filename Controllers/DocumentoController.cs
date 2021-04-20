@@ -74,7 +74,7 @@ namespace FINALP2.Controllers
 
             documentoNegocio.CreateDocuments(documentos);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Details");
         }
 
         // GET: Documento/Edit/5
@@ -89,7 +89,7 @@ namespace FINALP2.Controllers
         {
             documentoNegocio.EditDocuments(documentos);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Details");
 
         }
 
@@ -105,7 +105,7 @@ namespace FINALP2.Controllers
         {
             documentoNegocio.DeleteDocuments(id);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Details");
 
         }
 

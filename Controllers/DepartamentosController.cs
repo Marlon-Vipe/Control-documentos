@@ -46,7 +46,7 @@ namespace FINALP2.Controllers
 
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Details");
             
             
         }
@@ -64,7 +64,7 @@ namespace FINALP2.Controllers
 
             departamentoNegocio.EditDepartments(departamentos);
              
-                return RedirectToAction("Index");
+                return RedirectToAction("Details");
          
             
         }
@@ -84,7 +84,7 @@ namespace FINALP2.Controllers
             
                 // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Details");
             
             
             
